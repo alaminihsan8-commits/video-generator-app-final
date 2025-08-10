@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ভিডিও জেনারেটর</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <h1>ভিডিও জেনারেটর</h1>
+        <div class="upload-area">
+            <div class="upload-box">
+                <p>🖼️ Upload Image</p>
+                <label for="image-upload">Choose Image</label>
+                <input type="file" id="image-upload" accept="image/*" hidden>
+                <div class="file-info" id="image-info">Supports: JPG, PNG, GIF, WebP</div>
+            </div>
+            <div class="upload-box">
+                <p>🎵 Upload Audio</p>
+                <label for="audio-upload">Choose Audio</label>
+                <input type="file" id="audio-upload" accept="audio/*" hidden>
+                <div class="file-info" id="audio-info">Supports: MP3, WAV, AAC, OGG</div>
+            </div>
+        </div>
+        
+        <div class="generate-section">
+            <button id="generate-btn">Generate Video</button>
+            <p id="status-message"></p>
+            <div id="video-output-container">
+                </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
